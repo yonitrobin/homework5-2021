@@ -99,9 +99,10 @@ a:hover{
 
 .container{
   /* Requirement 5 code here*/
+  display: grid;
   grid-template-columns: 1fr 5fr 1fr;
   grid-template-rows: repeat(5,auto);
-  border-spacing: 15px;
+  grid-row-gap: 15px;
 }
 
 /* Remainder of requirements here: */
@@ -114,7 +115,8 @@ header{
   height: 400px; /* Parallax effect */
   grid-column: 1 / span 5;
   grid-row: 1/ span 1;
-  background-image: url("../images/header.jpg")
+  background-image: url("../images/header.jpg");
+  background-repeat: no-repeat;
   /* YOUR CODE HERE; */
 }
 
@@ -187,12 +189,13 @@ header{
 @media screen and (min-width: 800px){
   nav{
     padding: 30px 0;
-    align-items: right;
+    text-align: right;
 
     /* Your code here */
   }
 
   .container{
+    display: grid;
     grid-template-columns: 50px auto 500px auto 50px;
     grid-template-rows: repeat(5, 400px);
   }
